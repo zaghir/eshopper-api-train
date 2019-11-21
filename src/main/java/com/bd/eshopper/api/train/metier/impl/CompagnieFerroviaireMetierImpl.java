@@ -29,7 +29,8 @@ public class CompagnieFerroviaireMetierImpl implements CompagnieFerroviaireMetie
 
 	@Override
 	public CompagnieFerroviaire save(CompagnieFerroviaire o) {
-		if (compagnieFerroviaireRepository.existsById(o.getId())) {
+		
+		if (null != o.getId() &&compagnieFerroviaireRepository.existsById(o.getId())) {
 			throw new EntityExistsException("L'id " + o.getId() + "est déjà attribué pour les compagnies ferriviaires");
 		}
 		return compagnieFerroviaireRepository.save(o);

@@ -29,7 +29,7 @@ public class TrajetMetierImpl implements TrajetMetier {
 
 	@Override
 	public Trajet save(Trajet o) {
-		if (trajetRepository.existsById(o.getId())) {
+		if (null != o.getId() && trajetRepository.existsById(o.getId())) {
 			throw new EntityExistsException("L'id " + o.getId() + "est déjà attribué pour les trajets");
 		}
 		return trajetRepository.save(o);

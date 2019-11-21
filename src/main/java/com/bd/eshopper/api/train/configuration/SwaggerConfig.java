@@ -24,8 +24,8 @@ public class SwaggerConfig {
 			"http://localhost:9000",
 			"contact@gmail.com");
 	  public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
-			  "Api Eshopper Avion",
-			  "Api Eshopper Avion  Documentation",
+			  "Api Eshopper Train",
+			  "Api Eshopper Train  Documentation",
 			  "1.0",
 			  "urn:tos",
 	          DEFAULT_CONTACT,

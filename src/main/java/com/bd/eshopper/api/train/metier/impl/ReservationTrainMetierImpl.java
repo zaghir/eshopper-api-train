@@ -28,7 +28,7 @@ public class ReservationTrainMetierImpl implements com.bd.eshopper.api.train.met
 
 	@Override
 	public ReservationTrain save(ReservationTrain o) {
-		if (reservationTrainRepository.existsById(o.getId())) {
+		if (null != o.getId() && reservationTrainRepository.existsById(o.getId())) {
 			throw new EntityExistsException("L'id " + o.getId() + "est déjà attribué pour les réservations de train");
 
 		}

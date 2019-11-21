@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 public class Gare implements Serializable {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nom;
 	private String ville;

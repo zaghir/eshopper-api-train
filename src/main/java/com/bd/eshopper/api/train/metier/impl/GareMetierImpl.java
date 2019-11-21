@@ -29,9 +29,10 @@ public class GareMetierImpl implements GareMetier {
 
 	@Override
 	public Gare save(Gare o) {
-		if (gareRepository.existsById(o.getId())) {
+		if(null != o.getId() && gareRepository.existsById(o.getId())) {
 			throw new EntityExistsException("L'id " + o.getId() + "est déjà attribué pour les gares");
 		}
+		
 		return gareRepository.save(o);
 	}
 

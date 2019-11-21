@@ -14,7 +14,12 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Trajet implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2930157890698538551L;
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int numero;

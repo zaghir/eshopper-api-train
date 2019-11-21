@@ -10,8 +10,13 @@ import javax.persistence.Id;
 
 @Entity
 public class Gare implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6439294373862800153L;
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String nom;
 	private String ville;

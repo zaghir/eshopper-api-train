@@ -10,6 +10,11 @@ import com.bd.eshopper.api.train.entity.service.Reservation;
 
 @Entity
 public class ReservationTrain extends Reservation {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3926890147768066210L;
+	
 	@PrimaryKeyJoinColumn(name="RESERVATION_ID")
 	private String typeSiege;
 	private int nbPassagers;

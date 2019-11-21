@@ -20,8 +20,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 		
 	public static final Contact DEFAULT_CONTACT = new Contact(
-			"Zaghir Youssef",
-			"http://localhost:9000",
+			"Sainton Laurent",
+			"http://localhost:9100",
 			"contact@gmail.com");
 	  public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
 			  "Api Eshopper Train",
@@ -34,7 +34,7 @@ public class SwaggerConfig {
 	          new ArrayList<VendorExtension>());
 	  
 	  public static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = 
-			  new HashSet<String>(Arrays.asList("application/json" , "application/xml"));
+			  new HashSet<String>(Arrays.asList("application/json"/* , "application/xml"*/));
 
 	
 	/**

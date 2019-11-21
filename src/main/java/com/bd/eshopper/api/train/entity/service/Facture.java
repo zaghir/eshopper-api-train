@@ -13,63 +13,67 @@ import javax.persistence.OneToOne;
 @Entity
 public class Facture implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private int numero;
-    private Date dateFacturation;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7002432001304245225L;
 
-    @OneToOne
-    @JoinColumn(name = "facture_id")
-    private Reservation reservation;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private int numero;
+	private Date dateFacturation;
 
-    public Facture() {
-        
-    }
+	@OneToOne
+	@JoinColumn(name = "facture_id")
+	private Reservation reservation;
 
-    public Facture(int numero, Date dateFacturation, Reservation reservation) {
-        this.numero = numero;
-        this.dateFacturation = dateFacturation;
-        this.reservation = reservation;
-    }
+	public Facture() {
 
-    public Long getId() {
-        return id;
-    }
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Facture(int numero, Date dateFacturation, Reservation reservation) {
+		this.numero = numero;
+		this.dateFacturation = dateFacturation;
+		this.reservation = reservation;
+	}
 
-    public int getNumero() {
-        return numero;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public Date getDateFacturation() {
-        return dateFacturation;
-    }
+	public int getNumero() {
+		return numero;
+	}
 
-    public void setDateFacturation(Date dateFacturation) {
-        this.dateFacturation = dateFacturation;
-    }
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
 
-    public Reservation getReservation() {
-        return reservation;
-    }
+	public Date getDateFacturation() {
+		return dateFacturation;
+	}
 
-    public void setReservation(Reservation reservation) {
-        this.reservation = reservation;
-    }
+	public void setDateFacturation(Date dateFacturation) {
+		this.dateFacturation = dateFacturation;
+	}
 
-    @Override
-    public String toString() {
-        return "Facture{" + "id=" + id + ", numero=" + numero + ", dateFacturation=" + dateFacturation + ", reservation=" + reservation + '}';
-    }
-    
-    
+	public Reservation getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(Reservation reservation) {
+		this.reservation = reservation;
+	}
+
+	@Override
+	public String toString() {
+		return "Facture{" + "id=" + id + ", numero=" + numero + ", dateFacturation=" + dateFacturation
+				+ ", reservation=" + reservation + '}';
+	}
 
 }

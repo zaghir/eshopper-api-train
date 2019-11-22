@@ -22,7 +22,7 @@ public class SwaggerConfig {
 	public static final Contact DEFAULT_CONTACT = new Contact(
 			"Sainton Laurent",
 			"http://localhost:9100",
-			"contact@gmail.com");
+			"laurent.sainton@businessdecision.com");
 	  public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
 			  "Api Eshopper Train",
 			  "Api Eshopper Train  Documentation",
